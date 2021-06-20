@@ -26,8 +26,9 @@ namespace Assets.Scripts
                 if(CurrentTime <= 0)
                 {
                     timeActive = false;
-                    Start();
-                   //deactivating the game object
+                    Start(); // should be removed
+                   //deactivate the game object
+                   //------Method-----------
                     Debug.Log("Time finished Your Gift is Ready");
                 }
             }

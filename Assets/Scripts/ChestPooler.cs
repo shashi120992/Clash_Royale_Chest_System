@@ -12,6 +12,7 @@ namespace Assets.Scripts
         public class Pool
         {
             public string tag;
+            public int srno;
             public GameObject ChestPrefab;
             public int size;
 
@@ -26,6 +27,7 @@ namespace Assets.Scripts
         #endregion
 
         public List<Pool> pools;
+        public Transform parent;
         
         void Start()
         {

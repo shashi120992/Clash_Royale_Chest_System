@@ -592,7 +592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.8, y: -112}
+  m_AnchoredPosition: {x: -8.8, y: -70.617}
   m_SizeDelta: {x: 947.1052, y: 250.26697}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419965422
@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 588847374}
   - component: {fileID: 588847376}
   - component: {fileID: 588847375}
+  - component: {fileID: 588847377}
   m_Layer: 5
   m_Name: CoinsText
   m_TagString: Untagged
@@ -697,6 +698,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588847373}
   m_CullTransparentMesh: 0
+--- !u!114 &588847377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588847373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4791f74cb96c04cb014d745ec78f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cointext: {fileID: 588847375}
+  GemsText: {fileID: 861539249}
 --- !u!1 &795982299
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +797,7 @@ GameObject:
   - component: {fileID: 861539248}
   - component: {fileID: 861539250}
   - component: {fileID: 861539249}
+  - component: {fileID: 861539251}
   m_Layer: 5
   m_Name: GermsText
   m_TagString: Untagged
@@ -849,6 +865,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861539247}
   m_CullTransparentMesh: 0
+--- !u!114 &861539251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861539247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4791f74cb96c04cb014d745ec78f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cointext: {fileID: 588847375}
+  GemsText: {fileID: 861539249}
 --- !u!1 &955023626
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,21 +910,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: CommonChest
+    srno: 1
     ChestPrefab: {fileID: 6837081900272846949, guid: 184d043898124bd4fb42a0e9a7fd24fa,
       type: 3}
     size: 10
   - tag: RareChest
+    srno: 2
     ChestPrefab: {fileID: 9043398967478922787, guid: 05038dd11de3be749be0b17de5d5c860,
       type: 3}
     size: 10
   - tag: EpicChest
+    srno: 3
     ChestPrefab: {fileID: 4169887745120706225, guid: b6eef9b7a66eb2f4b8e059be6c27ad74,
       type: 3}
     size: 10
   - tag: LegendryChest
+    srno: 4
     ChestPrefab: {fileID: 744689879047895021, guid: 8e17ea7574d216540a6c3df7c9697959,
       type: 3}
     size: 10
+  parent: {fileID: 0}
 --- !u!4 &955023628
 Transform:
   m_ObjectHideFlags: 0
@@ -1019,6 +1054,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008147810}
   m_CullTransparentMesh: 0
+--- !u!1 &1120831279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120831281}
+  - component: {fileID: 1120831280}
+  m_Layer: 0
+  m_Name: exmple
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1120831280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120831279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c13980436a7dc46b9f29ed4f765f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: {fileID: 0}
+  button: {fileID: 1794654590}
+--- !u!4 &1120831281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120831279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 507.75, y: 200.78183, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185100246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,12 +1470,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794654588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23f567f712290ee4b9615f02075e0298, type: 3}
+  m_Script: {fileID: 11500000, guid: 27c13980436a7dc46b9f29ed4f765f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: {fileID: 1892451321}
+  slots: {fileID: 1740250923}
   button: {fileID: 1794654590}
-  parent: {fileID: 1892451321}
 --- !u!1 &1892451320
 GameObject:
   m_ObjectHideFlags: 0
